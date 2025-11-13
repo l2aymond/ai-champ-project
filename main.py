@@ -1,6 +1,21 @@
 # Set up and run this Streamlit App
 import streamlit as st
 import pandas as pd
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+import tiktoken
+
+
+if load_dotenv('.env'):
+   # for local development
+   OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+else:
+   OPENAI_KEY = st.secrets['OPENAI_API_KEY']
+
+
+# Pass the API Key to the OpenAI Client
+client = OpenAI(api_key=OPENAI_KEY)
 # from helper_functions import llm
 from logics.customer_query_handler import process_user_message
 from helper_functions.utility import check_password
