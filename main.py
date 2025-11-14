@@ -18,7 +18,7 @@ else:
 client = OpenAI(api_key=OPENAI_KEY)
 # from helper_functions import llm
 from logics.customer_query_handler import process_user_message
-from helper_functions.utility import check_password
+
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
@@ -28,9 +28,7 @@ st.set_page_config(
 # endregion <--------- Streamlit App Configuration --------->
 
 st.title("Streamlit App")
-# Check if the password is correct.  
-if not check_password():  
-    st.stop()
+
 form = st.form(key="form")
 form.subheader("Prompt")
 
