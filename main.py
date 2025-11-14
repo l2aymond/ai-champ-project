@@ -49,4 +49,4 @@ if form.form_submit_button("Submit"):
 
     print(course_details)
     df = pd.DataFrame(course_details)
-    df 
+    

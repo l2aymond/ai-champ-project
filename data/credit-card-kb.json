@@ -1,0 +1,137 @@
+{"id":"wallet:krisplus","type":"Wallet","properties":{"name":"Kris+","mcc_behavior":"passes_through","pay_via":"Apple/Google Pay","stacking":"card miles + in-app miles"}}
+{"id":"wallet:amaze","type":"Wallet","properties":{"name":"Amaze","mcc_behavior":"passes_through_with_prefix","descriptor_prefix":"AMAZE*","sgd_fee":"1% from 10 Mar 2025 (min S$0.50)","linking":"Mastercard-only","pay_via":"Apple/Google Pay"}}
+{"id":"wallet:atome","type":"Wallet","properties":{"name":"Atome","mcc_behavior":"force_5999_online","bnpl":"3 instalments","loyalty":"Atome+ → Max Miles (capped)"}}
+
+{"id":"bank:dbs","type":"Bank","properties":{"name":"DBS"}}
+{"id":"bank:uob","type":"Bank","properties":{"name":"UOB"}}
+{"id":"bank:hsbc","type":"Bank","properties":{"name":"HSBC"}}
+{"id":"bank:citi","type":"Bank","properties":{"name":"Citi"}}
+{"id":"bank:maybank","type":"Bank","properties":{"name":"Maybank"}}
+{"id":"bank:amex","type":"Bank","properties":{"name":"American Express"}}
+{"id":"bank:scb","type":"Bank","properties":{"name":"Standard Chartered"}}
+
+{"id":"prog:krisflyer","type":"PartnerProgram","properties":{"name":"KrisFlyer"}}
+{"id":"prog:asiamiles","type":"PartnerProgram","properties":{"name":"Asia Miles"}}
+
+{"id":"cat:online","type":"Category","properties":{"name":"Online"}}
+{"id":"cat:dining","type":"Category","properties":{"name":"Dining"}}
+{"id":"cat:travel","type":"Category","properties":{"name":"Travel"}}
+{"id":"cat:fcy","type":"Category","properties":{"name":"Foreign Currency (FCY)"}}
+{"id":"cat:contactless","type":"Category","properties":{"name":"Contactless/Mobile"}}
+{"id":"cat:transport","type":"Category","properties":{"name":"Transport"}}
+{"id":"cat:subscriptions","type":"Category","properties":{"name":"Subscriptions"}}
+{"id":"cat:fuel","type":"Category","properties":{"name":"Fuel"}}
+{"id":"cat:shopping","type":"Category","properties":{"name":"Shopping"}}
+{"id":"cat:entertainment","type":"Category","properties":{"name":"Entertainment"}}
+{"id":"cat:groceries","type":"Category","properties":{"name":"Groceries"}}
+
+{"id":"mcc:5311","type":"MCC","properties":{"name":"Department Stores","code":"5311","typical_category":"Online/Shopping"}}
+{"id":"mcc:5399","type":"MCC","properties":{"name":"Misc. General Merchandise","code":"5399","typical_category":"Online/Shopping"}}
+{"id":"mcc:5411","type":"MCC","properties":{"name":"Grocery Stores, Supermarkets","code":"5411","typical_category":"Groceries"}}
+{"id":"mcc:5999","type":"MCC","properties":{"name":"Misc. & Specialty Retail","code":"5999","typical_category":"Online"}}
+{"id":"mcc:5812","type":"MCC","properties":{"name":"Eating Places & Restaurants","code":"5812","typical_category":"Dining"}}
+{"id":"mcc:5814","type":"MCC","properties":{"name":"Fast Food Restaurants","code":"5814","typical_category":"Dining"}}
+{"id":"mcc:4111","type":"MCC","properties":{"name":"Local Commuter Transport","code":"4111","typical_category":"Transport"}}
+{"id":"mcc:4121","type":"MCC","properties":{"name":"Taxicabs & Limousines","code":"4121","typical_category":"Transport"}}
+{"id":"mcc:4814","type":"MCC","properties":{"name":"Telecom Services","code":"4814","typical_category":"Bills"}}
+{"id":"mcc:4900","type":"MCC","properties":{"name":"Utilities","code":"4900","typical_category":"Bills"}}
+{"id":"mcc:6300","type":"MCC","properties":{"name":"Insurance","code":"6300","typical_category":"Excluded"}}
+{"id":"mcc:5960","type":"MCC","properties":{"name":"Direct Marketing Insurance","code":"5960","typical_category":"Excluded"}}
+{"id":"mcc:6051","type":"MCC","properties":{"name":"Quasi-Cash/Top-ups","code":"6051","typical_category":"Excluded"}}
+{"id":"mcc:9399","type":"MCC","properties":{"name":"Government Services NEC","code":"9399","typical_category":"Excluded"}}
+{"id":"mcc:6540","type":"MCC","properties":{"name":"POI Funding (Transit top-ups)","code":"6540","typical_category":"Excluded"}}
+
+{"id":"card:dbs_wwbc","type":"Card","properties":{"name":"DBS Woman's World Card","bank":"DBS","base_mpd":"0.4","annual_fee":"~S$196","notes":"online bonus 4 mpd; overseas 1.2 mpd"}}
+{"id":"card:citi_rewards_mc","type":"Card","properties":{"name":"Citi Rewards (MC)","bank":"Citi","base_mpd":"0.4","annual_fee":"~S$196","notes":"4 mpd online/retail; excludes travel MCCs"}}
+{"id":"card:maybank_xl","type":"Card","properties":{"name":"Maybank XL Rewards","bank":"Maybank","base_mpd":"0.4","annual_fee":"~S$87","notes":"4 mpd dining/shopping/travel/entertainment/FCY; S$500 min"}}
+{"id":"card:hsbc_revo","type":"Card","properties":{"name":"HSBC Revolution","bank":"HSBC","base_mpd":"0.4","annual_fee":"S$0","notes":"4 mpd online/contactless"}}
+{"id":"card:uob_ladys_sol","type":"Card","properties":{"name":"UOB Lady's Solitaire","bank":"UOB","base_mpd":"0.4","annual_fee":"~S$414","notes":"10 mpd on any 2 categories; quarterly switch"}}
+{"id":"card:uob_ppv","type":"Card","properties":{"name":"UOB Preferred Platinum Visa","bank":"UOB","base_mpd":"0.4","annual_fee":"~S$196","notes":"4 mpd mobile contactless + online; split caps from Oct 2025"}}
+{"id":"card:uob_vs","type":"Card","properties":{"name":"UOB Visa Signature","bank":"UOB","base_mpd":"0.4","annual_fee":"~S$196","notes":"4 mpd FCY & SGD petrol/contactless with S$1k mins"}}
+{"id":"card:kf_uob","type":"Card","properties":{"name":"KrisFlyer UOB Credit Card","bank":"UOB","base_mpd":"1.2","annual_fee":"~S$196","notes":"3 mpd SIA/Scoot/KrisShop uncapped; 2.4 mpd selected categories"}}
+{"id":"card:amex_kf_ascend","type":"Card","properties":{"name":"AMEX KrisFlyer Ascend","bank":"Amex","base_mpd":"1.2","annual_fee":"~S$398","notes":"2 mpd SIA/Scoot; Grab 3.2 mpd cap"}}
+{"id":"card:maybank_horizon","type":"Card","properties":{"name":"Maybank Horizon VS","bank":"Maybank","notes":"up to 2.8 mpd on air tickets; travel-focused"}}
+{"id":"card:dbs_altitude","type":"Card","properties":{"name":"DBS Altitude","bank":"DBS","notes":"1.3 mpd local; 2.2 mpd FCY"}}
+{"id":"card:sc_journey","type":"Card","properties":{"name":"SC Journey","bank":"SCB","notes":"1.2 mpd local; 2 mpd FCY; 3 mpd online groceries/food delivery/transport"}}
+{"id":"card:citi_pm","type":"Card","properties":{"name":"Citi PremierMiles","bank":"Citi","notes":"1.2 mpd local; 2.2 mpd FCY; many partners"}}
+{"id":"card:uob_prvi","type":"Card","properties":{"name":"UOB PRVI Miles","bank":"UOB","notes":"1.4 mpd local; 2.4 mpd FCY; Agoda/Expedia boosts"}}
+{"id":"card:amex_highflyer","type":"Card","properties":{"name":"AMEX HighFlyer","bank":"Amex","notes":"1.2 mpd general; 2 mpd SIA group; business"}}
+
+{"source":"wallet:krisplus","target":"mcc:*","relation":"mcc_behavior","properties":{"passes_through":true,"note":"Card category logic applies; also earn in-app Kris+ miles"}}
+{"source":"wallet:amaze","target":"bank:uob","relation":"excluded_by","properties":{"rule":"UNI$ exclusion on AMAZE* from 1 Oct 2024"}}
+{"source":"wallet:amaze","target":"bank:dbs","relation":"excluded_by","properties":{"rule":"DBS excludes AMAZE* rewards from Dec 2025 updates"}}
+{"source":"wallet:amaze","target":"cat:fcy","relation":"optimization","properties":{"reason":"lower FX spread than issuer; 1% SGD fee makes FCY preferable"}}
+{"source":"wallet:atome","target":"mcc:5999","relation":"mcc_behavior","properties":{"forced":true,"note":"All Atome payments code 5999 online"}}
+{"source":"wallet:atome","target":"prog:krisflyer","relation":"loyalty_bridge","properties":{"via":"Atome+ → Max Miles → KrisFlyer","note":"caps apply"}}
+
+{"source":"card:dbs_wwbc","target":"cat:online","relation":"earns_on","properties":{"mpd":"4","cap_month":"S$1,000","base_mpd":"0.4","fcy_mpd":"1.2"}}
+{"source":"card:dbs_wwbc","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"4","logic":"Kris+ codes as online"}}
+{"source":"card:dbs_wwbc","target":"wallet:atome","relation":"pairs_with","properties":{"mpd":"4","logic":"Atome forces 5999 online"}}
+{"source":"card:dbs_wwbc","target":"prog:krisflyer","relation":"transfer_to","properties":{"ratio":"2 DBS Points = 1 mile"}}
+
+{"source":"card:citi_rewards_mc","target":"cat:online","relation":"earns_on","properties":{"mpd":"4","cap_month":"S$1,000","excludes":"airlines/hotels/OTAs travel MCCs"}}
+{"source":"card:citi_rewards_mc","target":"wallet:amaze","relation":"pairs_with","properties":{"mpd":"4","sgd_fee":"1% via Amaze","note":"great for FCY; Mastercard-only"}}
+{"source":"card:citi_rewards_mc","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"0.4 naked; 4 with Amaze workaround","note":"in-app mobile payments excluded for 10X"}}
+{"source":"card:citi_rewards_mc","target":"wallet:atome","relation":"pairs_with","properties":{"mpd":"4","logic":"MCC 5999 online qualifies"}}
+{"source":"card:citi_rewards_mc","target":"prog:krisflyer","relation":"transfer_to","properties":{"partners":"KrisFlyer + others"}}
+
+{"source":"card:maybank_xl","target":"cat:dining","relation":"earns_on","properties":{"mpd":"4","cap_month":"S$1,000","min_spend":"S$500"}}
+{"source":"card:maybank_xl","target":"cat:shopping","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:maybank_xl","target":"cat:travel","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:maybank_xl","target":"cat:entertainment","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:maybank_xl","target":"cat:fcy","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:maybank_xl","target":"wallet:amaze","relation":"pairs_with","properties":{"mpd":"4","note":"solid for FCY; Mastercard-only"}}
+{"source":"card:maybank_xl","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"4","logic":"MCC passthrough"}}
+{"source":"card:maybank_xl","target":"wallet:atome","relation":"pairs_with","properties":{"mpd":"4","logic":"MCC 5999 online qualifies"}}
+
+{"source":"card:hsbc_revo","target":"cat:online","relation":"earns_on","properties":{"mpd":"4","cap_month":"S$1,000"}}
+{"source":"card:hsbc_revo","target":"cat:contactless","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:hsbc_revo","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"4","logic":"eligible online/contactless buckets"}}
+{"source":"card:hsbc_revo","target":"wallet:atome","relation":"pairs_with","properties":{"mpd":"4","logic":"MCC 5999 online qualifies"}}
+{"source":"card:hsbc_revo","target":"prog:krisflyer","relation":"transfer_to","properties":{"ratio":"30k pts = 10k miles","partners":"20+ airlines"}}
+
+{"source":"card:uob_ladys_sol","target":"cat:*","relation":"earns_on","properties":{"mpd":"10 on any 2 chosen categories","cap_month":"S$1,500 combined","switch":"quarterly"}}
+{"source":"card:uob_ladys_sol","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"up to 10 if MCC matches chosen categories"}}
+
+{"source":"card:uob_ppv","target":"cat:contactless","relation":"earns_on","properties":{"mpd":"4","cap_month":"split caps from Oct 2025"}}
+{"source":"card:uob_ppv","target":"cat:online","relation":"earns_on","properties":{"mpd":"4"}}
+{"source":"card:uob_ppv","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"4 via mobile contactless scenarios"}}
+{"source":"card:uob_ppv","target":"wallet:amaze","relation":"pairs_with","properties":{"note":"Visa cannot be linked to Amaze"}}
+{"source":"card:uob_ppv","target":"wallet:atome","relation":"pairs_with","properties":{"mpd":"mixed DPs","caution":"despite 5999 whitelist; proceed with caution"}}
+
+{"source":"card:uob_vs","target":"cat:fcy","relation":"earns_on","properties":{"mpd":"4","min_spend":"S$1,000","cap_month":"S$1,200"}}
+{"source":"card:uob_vs","target":"cat:contactless","relation":"earns_on","properties":{"mpd":"4","min_spend":"S$1,000","cap_month":"S$1,200"}}
+{"source":"card:uob_vs","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"0.4 typical; exceptions exist; not treated as contactless in-app generally"}}
+
+{"source":"card:kf_uob","target":"prog:krisflyer","relation":"direct_credit_to","properties":{"mpd":"3 on SIA/Scoot/KrisShop uncapped"}}
+{"source":"card:kf_uob","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"3 uncapped SIA group; 2.4 mpd selected categories with conditions"}}
+
+{"source":"card:amex_kf_ascend","target":"prog:krisflyer","relation":"direct_credit_to","properties":{"mpd":"2 on SIA/Scoot; Grab 3.2 cap"}}
+{"source":"card:amex_kf_ascend","target":"wallet:krisplus","relation":"pairs_with","properties":{"mpd":"2 base; total depends on in-app bonus"}}
+
+{"source":"card:maybank_horizon","target":"cat:travel","relation":"earns_on","properties":{"mpd":"up to 2.8 on air tickets","notes":"caps/terms apply"}}
+
+{"source":"card:dbs_altitude","target":"cat:online","relation":"earns_on","properties":{"mpd":"1.3 local"}}
+{"source":"card:dbs_altitude","target":"cat:fcy","relation":"earns_on","properties":{"mpd":"2.2 FCY"}}
+
+{"source":"card:sc_journey","target":"cat:online","relation":"earns_on","properties":{"mpd":"3 on groceries/food delivery/transport (SGD)","notes":"otherwise 1.2 local; 2 FCY"}}
+
+{"source":"card:citi_pm","target":"cat:online","relation":"earns_on","properties":{"mpd":"1.2 local"}}
+{"source":"card:citi_pm","target":"cat:fcy","relation":"earns_on","properties":{"mpd":"2.2 FCY"}}
+
+{"source":"card:uob_prvi","target":"cat:online","relation":"earns_on","properties":{"mpd":"1.4 local"}}
+{"source":"card:uob_prvi","target":"cat:fcy","relation":"earns_on","properties":{"mpd":"2.4 FCY"}}
+
+{"source":"card:amex_highflyer","target":"prog:krisflyer","relation":"transfer_to","properties":{"ratio":"1:1 from HighFlyer points"}}
+
+{"source":"mcc:5311","target":"cat:online","relation":"belongs_to","properties":{"examples":"Lazada, Taobao dept"}}
+{"source":"mcc:5399","target":"cat:online","relation":"belongs_to","properties":{"examples":"Shopee, Qoo10"}}
+{"source":"mcc:5411","target":"cat:groceries","relation":"belongs_to","properties":{"examples":"RedMart via Lazada"}}
+{"source":"mcc:5999","target":"cat:online","relation":"belongs_to","properties":{"examples":"Amazon.sg; Atome default"}}
+{"source":"mcc:5812","target":"cat:dining","relation":"belongs_to","properties":{"examples":"Restaurants"}}
+{"source":"mcc:5814","target":"cat:dining","relation":"belongs_to","properties":{"examples":"Fast food"}}
+{"source":"mcc:4111","target":"cat:transport","relation":"belongs_to","properties":{"examples":"SimplyGo"}}
+{"source":"mcc:4121","target":"cat:transport","relation":"belongs_to","properties":{"examples":"Taxis"}}
+{"source":"mcc:6051","target":"cat:online","relation":"excluded","properties":{"note":"quasi-cash/top-ups"}}
+{"source":"mcc:9399","target":"cat:online","relation":"excluded","properties":{"note":"government/AXS"}}
+{"source":"mcc:6540","target":"cat:transport","relation":"excluded","properties":{"note":"transit top-ups"}}
