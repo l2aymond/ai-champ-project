@@ -3,9 +3,9 @@ import json
 from typing import List, Dict
 import faiss
 import numpy as np
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
 from pypdf import PdfReader
 import pickle
 
