@@ -1,0 +1,19 @@
+{
+  "admin": {
+    "DBS Woman's World Card": {
+      "statement_day": 12,
+      "payment_days": 20,
+      "updated_at": "2025-11-20T21:20:34.958293"
+    },
+    "Maybank XL Rewards": {
+      "statement_day": 1,
+      "payment_days": 20,
+      "updated_at": "2025-11-21T00:16:50.848491"
+    },
+    "Citi Rewards Mastercard": {
+      "statement_day": 20,
+      "payment_days": 20,
+      "updated_at": "2025-11-21T00:27:19.204852"
+    }
+  }
+}

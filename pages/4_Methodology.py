@@ -39,7 +39,8 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("""
     ### 1️⃣ Data Ingestion
-    - Load credit card knowledge base (JSON Lines)
+    - Load credit card knowledge base (JSON Lines generated from Gemini research)
+    - **Load Terms & Conditions (TNCs)** from PDF documents
     - Parse entity relationships (cards, wallets, banks)
     - Process uploaded PDF documents
     - Convert to structured text chunks
@@ -85,6 +86,25 @@ User Question
     ↓
 Response to User
 ```
+""")
+
+st.markdown("---")
+
+st.subheader("💰 Spending Optimization Logic")
+
+st.markdown("""
+Our spending tracker goes beyond simple logging by implementing smart optimization rules:
+
+### 1. Optimization Rules Engine
+- **Rule Definition**: Rules are defined in `card_rules.json` (e.g., "Min spend $600", "Cap $1000 on Online").
+- **Real-time Calculation**: As you add transactions, the system calculates:
+    - **Bonus Caps**: Tracks spending against category-specific caps (e.g., 4 mpd on up to $1000).
+    - **Min Spend**: Monitors progress towards minimum spend requirements for bonus interest or fee waivers.
+- **Visual Feedback**: Progress bars indicate how close you are to hitting a cap or meeting a target.
+
+### 2. Statement Period Management
+- **Unsettled Periods**: The system automatically calculates the "current" statement period for each card based on your configured statement day.
+- **Payment Tracking**: Estimates payment due dates (typically 20-25 days after statement date) to help you avoid late fees.
 """)
 
 st.markdown("---")

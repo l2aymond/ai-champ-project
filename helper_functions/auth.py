@@ -6,6 +6,7 @@ from typing import Optional, Dict, List
 
 USER_DATA_FILE = "data/users.json"
 SPENDING_DATA_FILE = "data/user_spending.json"
+USER_CARDS_FILE = "data/user_cards.json"
 
 def load_users() -> Dict:
     """Load users from JSON file"""
@@ -56,6 +57,44 @@ def save_user_spending(username: str, spending_data: List[Dict]):
     # Save back
     with open(SPENDING_DATA_FILE, 'w') as f:
         json.dump(all_spending, f, indent=2)
+
+def load_user_cards(username: str) -> Dict:
+    """Load card settings for a specific user"""
+    if os.path.exists(USER_CARDS_FILE):
+        with open(USER_CARDS_FILE, 'r') as f:
+            all_cards = json.load(f)
+            return all_cards.get(username, {})
+    return {}
+
+def save_user_cards(username: str, cards_data: Dict):
+    """Save card settings for a specific user"""
+    os.makedirs("data", exist_ok=True)
+    
+    # Load all cards data
+    if os.path.exists(USER_CARDS_FILE):
+        with open(USER_CARDS_FILE, 'r') as f:
+            all_cards = json.load(f)
+    else:
+        all_cards = {}
+    
+    # Update user's cards
+    all_cards[username] = cards_data
+    
+    # Save back
+    with open(USER_CARDS_FILE, 'w') as f:
+        json.dump(all_cards, f, indent=2)
+
+def update_card_settings(username: str, card_name: str, statement_day: int, payment_days: int):
+    """Update settings for a specific card"""
+    cards_data = load_user_cards(username)
+    
+    cards_data[card_name] = {
+        "statement_day": statement_day,
+        "payment_days": payment_days,
+        "updated_at": datetime.now().isoformat()
+    }
+    
+    save_user_cards(username, cards_data)
 
 def add_spending_entry(username: str, card_name: str, category: str, amount: float, date: str, notes: str = ""):
     """Add a spending entry for a user"""
@@ -150,14 +189,13 @@ def login_page():
                     st.rerun()
                 else:
                     st.error("❌ Invalid username or password")
-        
-        st.info("**Demo Account:** Username: `admin` | Password: `password123`")
     
     with tab2:
         st.subheader("Create New Account")
         with st.form("register_form"):
             new_username = st.text_input("Choose Username", key="reg_username")
             new_email = st.text_input("Email Address", key="reg_email")
+            new_invite_code = st.text_input("Invite Code", key="reg_invite_code")
             new_password = st.text_input("Choose Password", type="password", key="reg_password")
             confirm_password = st.text_input("Confirm Password", type="password", key="reg_confirm")
             register_submit = st.form_submit_button("Register")
@@ -166,6 +204,8 @@ def login_page():
                 if new_password != confirm_password:
                     st.error("❌ Passwords do not match")
                 else:
+                    if new_invite_code != "AI_CHAMP_2025":
+                        st.error("❌ Invalid invite code")
                     success, message = register_user(new_username, new_password, new_email)
                     if success:
                         st.success(f"✅ {message}! You can now login.")

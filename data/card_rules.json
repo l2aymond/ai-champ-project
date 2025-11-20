@@ -1,0 +1,157 @@
+{
+    "DBS Woman's World Card": {
+        "caps": [
+            {
+                "category": "Online Shopping",
+                "amount": 1000,
+                "period": "calendar_month",
+                "description": "4 mpd on Online Shopping"
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 0.4
+    },
+    "Citi Rewards Mastercard": {
+        "caps": [
+            {
+                "category": "Online Shopping",
+                "amount": 1000,
+                "period": "statement_month",
+                "description": "4 mpd on Online & Dept Stores",
+                "shared_with": [
+                    "Shopping (Retail)"
+                ]
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 0.4
+    },
+    "Maybank XL Rewards": {
+        "caps": [
+            {
+                "category": "Dining",
+                "amount": 1000,
+                "period": "calendar_month",
+                "description": "4 mpd on Dining, Retail, Travel",
+                "shared_with": [
+                    "Shopping (Retail)",
+                    "Travel",
+                    "Entertainment",
+                    "Foreign Currency"
+                ]
+            }
+        ],
+        "min_spend": 500,
+        "base_rate": 0.4
+    },
+    "HSBC Revolution": {
+        "caps": [
+            {
+                "category": "Online Shopping",
+                "amount": 1000,
+                "period": "calendar_month",
+                "description": "4 mpd on Online & Contactless",
+                "shared_with": [
+                    "Dining",
+                    "Groceries",
+                    "Transport"
+                ]
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 0.4
+    },
+    "UOB Lady's Solitaire": {
+        "caps": [
+            {
+                "category": "Chosen Category 1",
+                "amount": 1500,
+                "period": "calendar_month",
+                "description": "10 mpd on 2 chosen categories",
+                "shared_with": [
+                    "Chosen Category 2"
+                ]
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 0.4,
+        "note": "Requires user to define chosen categories. Assuming manual check for now."
+    },
+    "UOB Preferred Platinum Visa": {
+        "caps": [
+            {
+                "category": "Mobile Contactless",
+                "amount": 600,
+                "period": "calendar_month",
+                "description": "4 mpd on Mobile Contactless"
+            },
+            {
+                "category": "Online Shopping",
+                "amount": 600,
+                "period": "calendar_month",
+                "description": "4 mpd on Online Shopping"
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 0.4
+    },
+    "UOB Visa Signature": {
+        "caps": [
+            {
+                "category": "Foreign Currency",
+                "amount": 1200,
+                "period": "statement_month",
+                "description": "4 mpd on FCY (Min S$1k)"
+            },
+            {
+                "category": "Contactless",
+                "amount": 1200,
+                "period": "statement_month",
+                "description": "4 mpd on Contactless (Min S$1k)",
+                "shared_with": [
+                    "Transport"
+                ]
+            }
+        ],
+        "min_spend": 1000,
+        "min_spend_scope": "per_category",
+        "base_rate": 0.4
+    },
+    "KrisFlyer UOB Credit Card": {
+        "caps": [],
+        "min_spend": 1000,
+        "min_spend_scope": "annual_sia_group",
+        "description": "Uncapped 3 mpd on SIA Group. 1.2 mpd base.",
+        "base_rate": 1.2
+    },
+    "AMEX KrisFlyer Ascend": {
+        "caps": [
+            {
+                "category": "Transport",
+                "amount": 200,
+                "period": "calendar_month",
+                "description": "3.2 mpd on Grab"
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 1.2
+    },
+    "Maybank Horizon Visa Signature": {
+        "caps": [
+            {
+                "category": "Travel",
+                "amount": 10000,
+                "period": "calendar_month",
+                "description": "2.8 mpd on Air Tickets"
+            }
+        ],
+        "min_spend": 0,
+        "base_rate": 1.2
+    },
+    "Standard Chartered Journey": {
+        "caps": [],
+        "min_spend": 0,
+        "base_rate": 1.2,
+        "description": "3 mpd on Online Grocery, Food Delivery, Transport"
+    }
+}

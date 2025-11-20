@@ -74,6 +74,42 @@ class RAGSystem:
         return documents
 
     # ============================================================================
+    # NEW METHOD: Load TNC PDFs from directory
+    # ============================================================================
+    def load_tnc_pdfs(self, tnc_dir: str = "data/TNC") -> List[Document]:
+        """Load all PDF files from the TNC directory"""
+        documents = []
+        if not os.path.exists(tnc_dir):
+            print(f"Warning: TNC directory '{tnc_dir}' not found.")
+            return documents
+            
+        print(f"Loading TNC PDFs from {tnc_dir}...")
+        
+        for filename in os.listdir(tnc_dir):
+            if filename.lower().endswith('.pdf'):
+                file_path = os.path.join(tnc_dir, filename)
+                try:
+                    with open(file_path, 'rb') as f:
+                        # Reuse existing process_pdf logic but adapt for local file path
+                        # process_pdf expects a file-like object with a .name attribute
+                        # We can just pass the file object since we opened it
+                        pdf_docs = self.process_pdf(f)
+                        
+                        # Update metadata to indicate it's a TNC document
+                        for doc in pdf_docs:
+                            doc.metadata["source"] = filename
+                            doc.metadata["type"] = "TNC"
+                            doc.metadata["path"] = file_path
+                            
+                        documents.extend(pdf_docs)
+                        print(f"Loaded TNC: {filename}")
+                except Exception as e:
+                    print(f"Error loading TNC PDF {filename}: {e}")
+                    
+        print(f"Loaded {len(documents)} chunks from {len(os.listdir(tnc_dir))} files in TNC directory")
+        return documents
+
+    # ============================================================================
     # NEW METHOD: Format card chunk data from JSONL
     # ============================================================================
     def _format_card_chunk(self, data: Dict) -> str:
@@ -143,8 +179,7 @@ class RAGSystem:
 
         # Split documents into chunks
         chunks = self.text_splitter.split_documents(documents)
-        self.documents.extend(chunks)
-
+        
         # Create embeddings
         texts = [doc.page_content for doc in chunks]
         print(f"Creating embeddings for {len(texts)} chunks...")
@@ -162,6 +197,9 @@ class RAGSystem:
         else:
             self.index.add(embeddings_array)
             print(f"FAISS index updated")
+            
+        # Update documents list ONLY after successful embedding and indexing
+        self.documents.extend(chunks)
 
     def save_vector_store(self):
         """Save FAISS index and documents to disk"""

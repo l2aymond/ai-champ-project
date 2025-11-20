@@ -1,5 +1,5 @@
 import streamlit as st
-from helper_functions.auth import require_login, display_user_header, load_user_spending, save_user_spending, add_spending_entry, delete_spending_entry
+from helper_functions.auth import require_login, display_user_header, load_user_spending, save_user_spending, add_spending_entry, delete_spending_entry, load_user_cards, update_card_settings
 from helper_functions.spending_tracker import display_spending_tracker
 
 # Page config
@@ -26,5 +26,7 @@ else:
         load_user_spending,
         save_user_spending,
         add_spending_entry,
-        delete_spending_entry
+        delete_spending_entry,
+        load_user_cards,
+        update_card_settings
     )

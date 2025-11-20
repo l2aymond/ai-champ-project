@@ -39,13 +39,32 @@ else:
         # Try to load existing vector store
         if not st.session_state.rag_system.load_vector_store():
             # If no existing store, build from credit card KB
+            # If no existing store, build from credit card KB and TNCs
             with st.spinner("🔄 Initializing knowledge base..."):
+                # Load Credit Card KB
                 kb_docs = st.session_state.rag_system.load_credit_card_kb()
-                st.session_state.rag_system.build_vector_store(kb_docs)
+                
+                # Load TNC PDFs
+                tnc_docs = st.session_state.rag_system.load_tnc_pdfs()
+                
+                # Combine all documents
+                all_docs = kb_docs + tnc_docs
+                
+                st.session_state.rag_system.build_vector_store(all_docs)
                 st.session_state.rag_system.save_vector_store()
     
     # Main content
     st.title("💳 Credit Card Rewards Advisor")
+    
+    with st.expander("⚠️ IMPORTANT NOTICE: Disclaimer"):
+        st.markdown("""
+        **IMPORTANT NOTICE**: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
+
+        Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output.
+
+        Always consult with qualified professionals for accurate and personalized advice.
+        """)
+
     st.markdown("### AI-Powered Credit Card Recommendations for Singapore")
     
     st.markdown("""

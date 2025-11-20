@@ -27,15 +27,16 @@ intelligent recommendations based on a comprehensive knowledge base of Singapore
    - Get detailed answers about miles per dollar (mpd), spending caps, and card features
    - Understand complex card-wallet pairings and optimization strategies
 
-2. **💳 Personal Spending Tracker**
-   - Track spending across multiple credit cards
-   - Visualize spending patterns by category and card
-   - Export your spending data for analysis
+2. **💳 Smart Spending Tracker**
+   - **Optimization Tracker**: Visual progress bars for Bonus Caps and Minimum Spend requirements
+   - **Statement Management**: Track "Unsettled Statement Periods" and estimated payment due dates
+   - **Visual Analytics**: Heatmaps and charts for spending patterns
+   - Track spending across multiple credit cards and export data
 
-3. **📄 Document Upload**
-   - Upload additional PDF documents to expand the knowledge base
-   - System automatically processes and indexes new information
-   - Seamless integration with existing credit card knowledge
+3. **📄 Enhanced Knowledge Base**
+   - **Document Upload**: Upload PDF documents (e.g., TNCs) to expand the knowledge base
+   - **Comprehensive Data**: Includes Caps, MPD, Exclusions, and detailed merchant category code mappings
+   - **Seamless Integration**: System automatically processes and indexes new information
 
 4. **🔐 User Authentication**
    - Secure login system with individual user accounts
@@ -66,21 +67,20 @@ Our system is built on a comprehensive database containing:
 - **Document Processing**: PyPDF for PDF parsing
 - **Data Visualization**: Plotly, Pandas
 
-### 📧 Contact & Support
-
-For questions, feedback, or support:
-- Email: support@creditcardadvisor.sg
-- GitHub: github.com/creditcardadvisor
-
 ### 📜 Disclaimer
 
 This application provides general information and recommendations based on publicly available data. 
 Always verify credit card terms and conditions with the respective banks before making financial decisions. 
 Rewards rates, caps, and terms are subject to change by card issuers.
 
+This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
+
+Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output.
+
+Always consult with qualified professionals for accurate and personalized advice.
 ---
 
-*Last Updated: January 2025*
+*Last Updated: November 2025*
 """)
 
 st.markdown("---")
@@ -100,4 +100,3 @@ with col3:
 
 st.markdown("---")
 
-st.info("💡 **Tip**: Check out the Methodology page to learn how our RAG system works!")
