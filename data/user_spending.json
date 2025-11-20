@@ -1,0 +1,67 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "card_name": "DBS Woman's World Card",
+      "category": "Online Shopping",
+      "amount": 100.0,
+      "date": "2025-11-15",
+      "notes": "",
+      "timestamp": "2025-11-15T00:19:19.159426"
+    },
+    {
+      "id": 2,
+      "card_name": "DBS Woman's World Card",
+      "category": "Online Shopping",
+      "amount": 55.0,
+      "date": "2025-11-20",
+      "notes": "",
+      "timestamp": "2025-11-20T23:48:59.226213"
+    },
+    {
+      "id": 3,
+      "card_name": "Maybank XL Rewards",
+      "category": "Dining",
+      "amount": 200.0,
+      "date": "2025-11-21",
+      "notes": "",
+      "timestamp": "2025-11-21T00:15:22.641261"
+    },
+    {
+      "id": 4,
+      "card_name": "Maybank XL Rewards",
+      "category": "Dining",
+      "amount": 200.0,
+      "date": "2025-11-21",
+      "notes": "",
+      "timestamp": "2025-11-21T00:15:27.887297"
+    },
+    {
+      "id": 5,
+      "card_name": "DBS Woman's World Card",
+      "category": "Online Shopping",
+      "amount": 0.01,
+      "date": "2025-11-21",
+      "notes": "",
+      "timestamp": "2025-11-21T00:17:40.473511"
+    },
+    {
+      "id": 6,
+      "card_name": "Citi Rewards Mastercard",
+      "category": "Online Shopping",
+      "amount": 200.0,
+      "date": "2025-11-21",
+      "notes": "",
+      "timestamp": "2025-11-21T00:24:02.244172"
+    },
+    {
+      "id": 7,
+      "card_name": "Citi Rewards Mastercard",
+      "category": "Online Shopping",
+      "amount": 20.0,
+      "date": "2025-11-21",
+      "notes": "",
+      "timestamp": "2025-11-21T00:26:16.268685"
+    }
+  ]
+}
